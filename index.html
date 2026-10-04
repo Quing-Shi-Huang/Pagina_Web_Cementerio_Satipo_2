@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cementerio de Satipo</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header" id="header">
+
+        <div class="container nav-container">
+
+            <a href="#inicio" class="logo">
+                <span class="logo-icon">
+                    <i class="fa-solid fa-cross"></i>
+                </span>
+
+                <span>
+                    <strong>Cementerio</strong>
+                    <small>de Satipo</small>
+                </span>
+            </a>
+
+            <nav class="navbar" id="navbar">
+                <a href="#inicio" class="active">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#contacto">Contacto</a>
+
+                <button class="login-btn" onclick="openLogin()">
+                    <i class="fa-solid fa-user"></i>
+                    Iniciar sesión
+                </button>
+            </nav>
+
+            <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
+    </header>
+
+
+    <!-- ================= HERO / CARRUSEL ================= -->
+    <main>
+
+        <section class="hero" id="inicio">
+
+            <div class="carousel">
+
+                <div class="slide active"
+                     style="background-image: url('https://images.unsplash.com/photo-1507371341162-763b5e419408?auto=format&fit=crop&w=1800&q=85');">
+
+                    <div class="overlay"></div>
+
+                    <div class="hero-content container">
+
+                        <span class="eyebrow">
+                            <i class="fa-solid fa-dove"></i>
+                            Un espacio para recordar
+                        </span>
+
+                        <h1>
+                            Cementerio<br>
+                            <span>de Satipo</span>
+                        </h1>
+
+                        <p>
+                            Un lugar de paz, respeto y memoria,
+                            donde honramos la vida y el legado
+                            de quienes ya no están con nosotros.
+                        </p>
+
+                        <div class="hero-buttons">
+                            <a href="#servicios" class="btn btn-primary">
+                                Conocer servicios
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                            <a href="#contacto" class="btn btn-outline">
+                                Realizar consulta
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="slide"
+                     style="background-image: url('https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?auto=format&fit=crop&w=1800&q=85');">
+
+                    <div class="overlay"></div>
+
+                    <div class="hero-content container">
+
+                        <span class="eyebrow">
+                            <i class="fa-solid fa-heart"></i>
+                            Siempre en nuestra memoria
+                        </span>
+
+                        <h1>
+                            Honramos<br>
+                            <span>sus recuerdos</span>
+                        </h1>
+
+                        <p>
+                            Brindamos atención responsable y servicios
+                            pensados para acompañar a las familias
+                            en momentos importantes.
+                        </p>
+
+                        <div class="hero-buttons">
+                            <a href="#nosotros" class="btn btn-primary">
+                                Conócenos
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="slide"
+                     style="background-image: url('https://images.unsplash.com/photo-1489447068241-b3490214e879?auto=format&fit=crop&w=1800&q=85');">
+
+                    <div class="overlay"></div>
+
+                    <div class="hero-content container">
+
+                        <span class="eyebrow">
+                            <i class="fa-solid fa-leaf"></i>
+                            Paz y tranquilidad
+                        </span>
+
+                        <h1>
+                            Un espacio<br>
+                            <span>para recordar</span>
+                        </h1>
+
+                        <p>
+                            Trabajamos para mantener un ambiente digno,
+                            ordenado y tranquilo para todas las familias.
+                        </p>
+
+                        <div class="hero-buttons">
+                            <a href="#contacto" class="btn btn-primary">
+                                Contáctanos
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Controles -->
+                <button class="carousel-control prev" onclick="changeSlide(-1)">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <button class="carousel-control next" onclick="changeSlide(1)">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+                <!-- Indicadores -->
+                <div class="dots">
+                    <span class="dot active" onclick="currentSlide(0)"></span>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PRESENTACIÓN ================= -->
+        <section class="intro section">
+
+            <div class="container intro-grid">
+
+                <div class="intro-text">
+
+                    <span class="section-tag">Cementerio de Satipo</span>
+
+                    <h2>
+                        Un lugar donde
+                        <span>vive el recuerdo</span>
+                    </h2>
+
+                    <p>
+                        Nuestro compromiso es brindar un espacio digno,
+                        tranquilo y respetuoso para el descanso de nuestros
+                        seres queridos.
+                    </p>
+
+                    <p>
+                        Ofrecemos servicios orientados a las necesidades
+                        de las familias, procurando siempre una atención
+                        cercana, transparente y humana.
+                    </p>
+
+                    <a href="#nosotros" class="text-link">
+                        Conoce más sobre nosotros
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+                <div class="intro-card">
+
+                    <div class="intro-card-icon">
+                        <i class="fa-solid fa-hands-holding-circle"></i>
+                    </div>
+
+                    <h3>Respeto y compromiso</h3>
+
+                    <p>
+                        Cuidamos cada detalle para conservar un entorno
+                        apropiado para la memoria de nuestros seres queridos.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SERVICIOS ================= -->
+        <section class="services section" id="servicios">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-tag">Nuestros servicios</span>
+
+                    <h2>
+                        Atención pensada para
+                        <span>las familias</span>
+                    </h2>
+
+                    <p>
+                        Conoce algunos de los servicios que ponemos
+                        a disposición de nuestra comunidad.
+                    </p>
+
+                </div>
+
+
+                <div class="services-grid">
+
+                    <article class="service-card">
+
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1548625149-fc4a29cf7092?auto=format&fit=crop&w=700&q=80"
+                                 alt="Sepultura">
+                        </div>
+
+                        <div class="service-content">
+
+                            <div class="service-icon">
+                                <i class="fa-solid fa-cross"></i>
+                            </div>
+
+                            <h3>Sepulturas</h3>
+
+                            <p>
+                                Información y atención relacionada con
+                                espacios de sepultura y procedimientos.
+                            </p>
+
+                            <a href="#contacto">
+                                Consultar
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=700&q=80"
+                                 alt="Mantenimiento">
+                        </div>
+
+                        <div class="service-content">
+
+                            <div class="service-icon">
+                                <i class="fa-solid fa-leaf"></i>
+                            </div>
+
+                            <h3>Mantenimiento</h3>
+
+                            <p>
+                                Conservación y cuidado de las instalaciones
+                                para mantener un ambiente adecuado.
+                            </p>
+
+                            <a href="#contacto">
+                                Consultar
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=700&q=80"
+                                 alt="Nichos">
+                        </div>
+
+                        <div class="service-content">
+
+                            <div class="service-icon">
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+
+                            <h3>Nichos</h3>
+
+                            <p>
+                                Información sobre disponibilidad,
+                                procedimientos y administración de nichos.
+                            </p>
+
+                            <a href="#contacto">
+                                Consultar
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=700&q=80"
+                                 alt="Trámites">
+                        </div>
+
+                        <div class="service-content">
+
+                            <div class="service-icon">
+                                <i class="fa-solid fa-file-lines"></i>
+                            </div>
+
+                            <h3>Trámites y consultas</h3>
+
+                            <p>
+                                Orientación para realizar consultas y
+                                conocer los requisitos de cada procedimiento.
+                            </p>
+
+                            <a href="#contacto">
+                                Consultar
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= NOSOTROS ================= -->
+        <section class="about section" id="nosotros">
+
+            <div class="container about-grid">
+
+                <div class="about-image">
+
+                    <img src="https://images.unsplash.com/photo-1500099817043-86d46000d58f?auto=format&fit=crop&w=1000&q=85"
+                         alt="Cementerio">
+
+                    <div class="experience-card">
+                        <i class="fa-solid fa-heart"></i>
+                        <strong>Compromiso</strong>
+                        <span>con nuestra comunidad</span>
+                    </div>
+
+                </div>
+
+
+                <div class="about-content">
+
+                    <span class="section-tag">Nosotros</span>
+
+                    <h2>
+                        Un servicio basado en
+                        <span>respeto y confianza</span>
+                    </h2>
+
+                    <p>
+                        El Cementerio de Satipo representa un espacio
+                        destinado a preservar la memoria y ofrecer un
+                        lugar digno para el descanso de nuestros seres queridos.
+                    </p>
+
+                    <div class="about-features">
+
+                        <div>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Atención responsable</span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Espacios cuidados</span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Orientación a las familias</span>
+                        </div>
+
+                        <div>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Compromiso con Satipo</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACTO ================= -->
+        <section class="contact section" id="contacto">
+
+            <div class="container">
+
+                <div class="contact-wrapper">
+
+                    <div class="contact-info">
+
+                        <span class="section-tag">Contacto</span>
+
+                        <h2>
+                            ¿Tienes alguna
+                            <span>consulta?</span>
+                        </h2>
+
+                        <p>
+                            Completa el formulario y nuestro equipo
+                            podrá orientarte con la información que necesites.
+                        </p>
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+
+                            <div>
+                                <strong>Ubicación</strong>
+                                <span>Satipo, Junín, Perú</span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+
+                            <div>
+                                <strong>Teléfono</strong>
+                                <span>+51 000 000 000</span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+
+                            <div>
+                                <strong>Correo electrónico</strong>
+                                <span>contacto@cementeriosatipo.pe</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <form class="contact-form" id="contactForm">
+
+                        <h3>Envíanos tu consulta</h3>
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+                                <label for="nombre">Nombre completo</label>
+                                <input type="text"
+                                       id="nombre"
+                                       name="nombre"
+                                       placeholder="Tu nombre"
+                                       required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="telefono">Teléfono</label>
+                                <input type="tel"
+                                       id="telefono"
+                                       name="telefono"
+                                       placeholder="Tu teléfono">
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="email">Correo electrónico</label>
+
+                            <input type="email"
+                                   id="email"
+                                   name="email"
+                                   placeholder="correo@ejemplo.com"
+                                   required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="asunto">Asunto</label>
+
+                            <select id="asunto" name="asunto">
+
+                                <option value="">Selecciona una opción</option>
+                                <option>Información de sepultura</option>
+                                <option>Información de nichos</option>
+                                <option>Mantenimiento</option>
+                                <option>Trámites</option>
+                                <option>Otra consulta</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="mensaje">Mensaje</label>
+
+                            <textarea id="mensaje"
+                                      name="mensaje"
+                                      rows="5"
+                                      placeholder="Escribe tu consulta..."
+                                      required></textarea>
+
+                        </div>
+
+
+                        <button type="submit" class="btn btn-primary form-btn">
+                            Enviar consulta
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+
+                        <div class="form-message" id="formMessage"></div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= UBICACIÓN ================= -->
+        <section class="location-section">
+
+            <div class="container location-grid">
+
+                <div>
+
+                    <span class="section-tag">Visítanos</span>
+
+                    <h2>Encuéntranos en <span>Satipo</span></h2>
+
+                    <p>
+                        Puedes acercarte a nuestras instalaciones para
+                        recibir orientación y atención personalizada.
+                    </p>
+
+                    <a href="https://www.google.com/maps/search/?api=1&query=Cementerio+de+Satipo"
+                       target="_blank"
+                       class="btn btn-light">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                        Ver ubicación
+                    </a>
+
+                </div>
+
+                <div class="map-placeholder">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <span>Satipo, Junín</span>
+
+                    <small>Perú</small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+            <div class="footer-brand">
+
+                <a href="#inicio" class="logo footer-logo">
+
+                    <span class="logo-icon">
+                        <i class="fa-solid fa-cross"></i>
+                    </span>
+
+                    <span>
+                        <strong>Cementerio</strong>
+                        <small>de Satipo</small>
+                    </span>
+
+                </a>
+
+                <p>
+                    Un espacio de paz, respeto y memoria
+                    para nuestra comunidad.
+                </p>
+
+                <div class="socials">
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+
+                    <a href="#" aria-label="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Navegación</h4>
+
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#contacto">Contacto</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Servicios</h4>
+
+                <a href="#servicios">Sepulturas</a>
+                <a href="#servicios">Nichos</a>
+                <a href="#servicios">Mantenimiento</a>
+                <a href="#servicios">Trámites</a>
+
+            </div>
+
+
+            <div class="footer-column footer-contact">
+
+                <h4>Ubicación</h4>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Satipo, Junín, Perú
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    +51 000 000 000
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    contacto@cementeriosatipo.pe
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                <p>
+                    © <span id="year"></span>
+                    Cementerio de Satipo. Todos los derechos reservados.
+                </p>
+
+                <p>
+                    Diseñado con respeto y compromiso.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= LOGIN MODAL ================= -->
+    <div class="modal" id="loginModal">
+
+        <div class="modal-overlay" onclick="closeLogin()"></div>
+
+        <div class="login-modal">
+
+            <button class="close-modal" onclick="closeLogin()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="login-icon">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <h2>Bienvenido</h2>
+
+            <p>Ingresa a tu cuenta para continuar.</p>
+
+            <form id="loginForm">
+
+                <div class="form-group">
+
+                    <label for="loginEmail">Correo electrónico</label>
+
+                    <div class="input-icon">
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <input type="email"
+                               id="loginEmail"
+                               placeholder="correo@ejemplo.com"
+                               required>
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="loginPassword">Contraseña</label>
+
+                    <div class="input-icon">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input type="password"
+                               id="loginPassword"
+                               placeholder="••••••••"
+                               required>
+
+                        <button type="button"
+                                class="show-password"
+                                onclick="togglePassword()">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="login-options">
+
+                    <label>
+                        <input type="checkbox">
+                        Recordarme
+                    </label>
+
+                    <a href="#">¿Olvidaste tu contraseña?</a>
+
+                </div>
+
+
+                <button type="submit" class="btn btn-primary login-submit">
+                    Iniciar sesión
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- Botón volver arriba -->
+    <button class="back-top" id="backTop">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
